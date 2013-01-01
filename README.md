@@ -1,3 +1,5 @@
+# Overview
+
 `python-bashcomplete` takes:
 
 * Lists of strings and dictionaries, or
@@ -5,6 +7,10 @@
 
 and compiles simple, yet functional bashcomplete code for any program that
 invokes bashcomplete.BashComplete() with a list or dictionary.
+
+# Setup
+
+    pip install python-bashcomplete
 
 # Example structures
 

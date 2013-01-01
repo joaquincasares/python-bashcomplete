@@ -231,6 +231,10 @@ def test():
     test = ['level1a', 'level1b']
     test = [{'level1a': ['1', '2', '3']}, {'level1b': ['4', '5', '6']}, 'level1c']
     test = {'level1a': ['1', '2', '3'], 'level1b': ['4', '5', '6']}
+    test = {
+        'files': ['`ls -1`'],
+        'devices': ['`ls -1 /dev`']
+    }
     bc = BashComplete(test)
 
 if __name__ == "__main__":

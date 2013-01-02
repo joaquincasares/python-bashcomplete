@@ -182,7 +182,7 @@ class BashComplete:
             bash_levels.append(level_template % (space_increment, i + 1, i + 1))
 
         constraint = ''
-        if self.constrain:
+        if not self.constrain:
             constraint = '-o default'
 
         # Do the final generation

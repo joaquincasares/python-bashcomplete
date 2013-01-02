@@ -12,7 +12,7 @@ except:
       from distutils.core import setup
 
 setup(name='python-bashcomplete',
-      version='1.0-1',
+      version='1.1-0',
       description='bashcomplete creation from python lists and dictionaries.',
       long_description=open('README.md').read(),
       author='Joaquin Casares',

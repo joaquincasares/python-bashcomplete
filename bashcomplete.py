@@ -89,9 +89,11 @@ class BashComplete:
             self.generate_bash_complete(parent_level[this_key], spaces + 2, level + 1)
 
 
-    def __init__(self, incoming, constrain=False):
+    def __init__(self, incoming, constrain=False, filename=None, output_filename=None):
         # Internal variables
         self.constrain = constrain
+        self.filename = filename
+        self.output_filename = output_filename
         self.bash_array = []
         self.max_level = 1
 
@@ -199,10 +201,16 @@ class BashComplete:
         '''Find filenames for .bash_complete filename and bash functions'''
 
         # Get caller's filename
-        filename = os.path.basename(sys.argv[0])
+        if self.filename:
+            filename = self.filename
+        else:
+            filename = os.path.basename(sys.argv[0])
 
         # Ensure alphanumeric variable for bash code
-        clean_filename = re.sub('[\W_]+', '_', filename)
+        if self.output_filename:
+            clean_filename = self.output_filename
+        else:
+            clean_filename = re.sub('[\W_]+', '_', filename)
 
         return filename, clean_filename
 

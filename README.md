@@ -62,10 +62,14 @@ where `test` is your data structure. This will generate
 `<filename>.bash_complete` in your current folder using the filename of the
 executing program.
 
-If you wish to constrain the autocomplete words to what has been defined,
+If you wish to constrain the autocomplete words to only what has been defined,
 use:
 
     bashcomplete.BashComplete(test, constrain=True)
+
+If you wish to create a .bash_complete file with another name use:
+
+    bashcomplete.BashComplete(test, filename='myprogram.py', output_filename='myprogram_py_cloudversion')
 
 # Usage
 

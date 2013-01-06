@@ -13,7 +13,7 @@ except:
 
 setup(name='python-bashcomplete',
       version='1.2-0',
-      description='bashcomplete creation from python lists and dictionaries.',
+      description='Takes a Python list or dictionary input and automatically generates simple, yet functioning, bashcompletion code.',
       long_description=open('README.md').read(),
       author='Joaquin Casares',
       author_email='joaquin.casares AT gmail.com',
